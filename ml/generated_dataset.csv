@@ -1,0 +1,501 @@
+Timestamp,Source,SourceClass,Destination,DestinationClass,User,Device,EventType,Description,Severity,MLRiskScore
+2023-09-17T01:42:31,10.0.0.2,safe,166.127.213.176,malicious,anonymous,Workstation123,auth-lockout,Application error: Error message: 96,critical,0.24
+2023-09-17T01:42:31,10.0.0.100,safe,10.0.0.101,safe,admin,Workstation123,auth-success,Successful login for user 'anonymous' from IP '192.168.1.100',critical,0.03
+2023-09-17T01:42:31,10.0.0.100,safe,10.0.0.3,safe,user123,Workstation123,system-shutdown,User 'user123' used application 'App1',warning,0.87
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.2.6,safe,admin,Workstation123,system-failure,Application error: Error message: 96,error,0.86
+2023-09-17T01:42:31,192.168.1.100,safe,192.168.2.6,safe,user123,DeviceXYZ,auth-success,System shutdown: Reason2,error,0.55
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.3,malicious,anonymous,DeviceXYZ,application-errors,System shutdown: Reason2,informational,0.38
+2023-09-17T01:42:31,10.1.1.1,safe,10.0.0.3,safe,guest,ServerABC,auth-success,User 'user123' used application 'App1',error,0.84
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,admin,ServerABC,application-errors,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.76
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.10.6,malicious,anonymous,DeviceXYZ,system-shutdown,System shutdown: Reason2,informational,0.2
+2023-09-17T01:42:31,10.0.0.100,safe,166.127.213.176,safe,anonymous,ServerABC,system-shutdown,Critical system failure: Error message: 78,error,0.09
+2023-09-17T01:42:31,10.1.1.1,safe,192.168.10.6,safe,admin,ServerABC,application-usage,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.39
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.10.6,malicious,user123,Workstation123,auth-success,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.92
+2023-09-17T01:42:31,10.1.1.1,malicious,166.127.213.176,safe,user123,DeviceXYZ,auth-success,Critical system failure: Error message: 78,warning,0.22
+2023-09-17T01:42:31,172.16.0.10,malicious,166.127.213.176,safe,guest,DeviceXYZ,system-shutdown,User 'admin' changed permissions for file '/path/to/file.txt',error,0.26
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.2.6,safe,anonymous,DeviceXYZ,file-access,Application error: Error message: 96,error,0.04
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.2.6,safe,user123,Workstation123,file-access,User 'user123' used application 'App1',critical,0.33
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,10.0.0.3,malicious,guest,ServerABC,auth-lockout,Application error: Error message: 96,critical,0.92
+2023-09-17T01:42:31,31.15.164.90:27783,safe,192.168.10.6,malicious,user123,DeviceXYZ,permission-changes,User 'admin' changed permissions for file '/path/to/file.txt',informational,0.67
+2023-09-17T01:42:31,10.0.0.2,safe,166.127.213.176,safe,admin,DeviceXYZ,auth-success,Critical system failure: Error message: 78,informational,0.76
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,10.0.0.101,malicious,admin,ServerABC,permission-changes,Critical system failure: Error message: 78,critical,0.25
+2023-09-17T01:42:31,10.1.1.1,safe,10.0.0.3,safe,anonymous,DeviceXYZ,system-shutdown,User 'admin' locked out after multiple failed attempts,critical,0.94
+2023-09-17T01:42:31,10.0.0.100,malicious,166.127.213.176,malicious,anonymous,ServerABC,system-shutdown,System shutdown: Reason2,warning,0.83
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.0.2,malicious,user123,Workstation123,permission-changes,User 'admin' changed permissions for file '/path/to/file.txt',informational,0.8
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,guest,Workstation123,permission-changes,System shutdown: Reason2,warning,0.28
+2023-09-17T01:42:31,10.0.0.100,malicious,166.127.213.176,malicious,guest,ServerABC,file-access,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.47
+2023-09-17T01:42:31,192.168.1.100,malicious,10.0.0.3,malicious,admin,DeviceXYZ,file-access,Critical system failure: Error message: 78,critical,0.79
+2023-09-17T01:42:31,172.16.0.10,malicious,166.127.213.176,safe,guest,DeviceXYZ,application-usage,User 'admin' locked out after multiple failed attempts,critical,0.02
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.101,malicious,admin,ServerABC,auth-success,System shutdown: Reason2,error,0.64
+2023-09-17T01:42:31,31.15.164.90:27783,safe,166.127.213.176,malicious,guest,ServerABC,system-failure,User 'admin' locked out after multiple failed attempts,informational,0.33
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.2.6,malicious,admin,ServerABC,auth-lockout,Application error: Error message: 96,warning,0.33
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,user123,DeviceXYZ,application-errors,User 'admin' locked out after multiple failed attempts,informational,0.72
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.10.6,malicious,admin,Workstation123,system-shutdown,Application error: Error message: 96,warning,0.61
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.0.2,safe,user123,Workstation123,application-errors,User 'admin' changed permissions for file '/path/to/file.txt',informational,0.67
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,user123,DeviceXYZ,auth-lockout,User 'admin' locked out after multiple failed attempts,critical,0.75
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.2.6,safe,admin,Workstation123,system-failure,Application error: Error message: 96,critical,0.78
+2023-09-17T01:42:31,10.1.1.1,safe,10.0.0.101,safe,anonymous,Workstation123,application-usage,System shutdown: Reason2,warning,0.93
+2023-09-17T01:42:31,10.0.0.2,safe,10.0.0.101,malicious,guest,Workstation123,system-shutdown,File access: Read to file '/path/to/file120.txt',informational,0.48
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.0.2,malicious,guest,ServerABC,system-failure,Critical system failure: Error message: 78,error,0.43
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.10.6,safe,guest,Workstation123,system-failure,User 'admin' changed permissions for file '/path/to/file.txt',error,0.31
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.3,malicious,guest,ServerABC,application-errors,User 'admin' locked out after multiple failed attempts,error,0.01
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.2.6,safe,user123,DeviceXYZ,auth-success,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.32
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.101,malicious,guest,DeviceXYZ,system-shutdown,Critical system failure: Error message: 78,warning,0.52
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.3,safe,anonymous,Workstation123,file-access,File access: Read to file '/path/to/file120.txt',warning,0.96
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.0.2,malicious,anonymous,ServerABC,system-failure,Successful login for user 'anonymous' from IP '192.168.1.100',critical,0.1
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.10.6,safe,guest,DeviceXYZ,auth-lockout,Application error: Error message: 96,warning,0.21
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.10.6,malicious,anonymous,ServerABC,application-usage,System shutdown: Reason2,critical,0.81
+2023-09-17T01:42:31,10.0.0.100,malicious,10.0.0.101,malicious,user123,ServerABC,file-access,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.17
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.0.2,malicious,guest,Workstation123,application-usage,System shutdown: Reason2,informational,0.84
+2023-09-17T01:42:31,10.0.0.100,malicious,192.168.10.6,malicious,guest,Workstation123,system-failure,User 'admin' locked out after multiple failed attempts,error,0.16
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.2.6,malicious,guest,DeviceXYZ,application-errors,Successful login for user 'anonymous' from IP '192.168.1.100',informational,0.96
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.3,malicious,anonymous,Workstation123,permission-changes,User 'admin' locked out after multiple failed attempts,informational,0.72
+2023-09-17T01:42:31,10.0.0.100,malicious,192.168.10.6,safe,user123,Workstation123,application-errors,System shutdown: Reason2,critical,0.54
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.2.6,safe,user123,DeviceXYZ,application-errors,Critical system failure: Error message: 78,informational,0.24
+2023-09-17T01:42:31,192.168.1.100,malicious,10.0.0.101,safe,admin,ServerABC,auth-lockout,File access: Read to file '/path/to/file120.txt',error,0.41
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.2.6,safe,user123,DeviceXYZ,file-access,Critical system failure: Error message: 78,critical,0.95
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.3,safe,anonymous,ServerABC,system-failure,Application error: Error message: 96,warning,0.26
+2023-09-17T01:42:31,31.15.164.90:27783,safe,192.168.0.2,safe,guest,ServerABC,system-failure,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.29
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.10.6,safe,anonymous,ServerABC,file-access,User 'admin' locked out after multiple failed attempts,critical,0.65
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.101,malicious,user123,DeviceXYZ,permission-changes,User 'user123' used application 'App1',critical,0.93
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.2.6,safe,anonymous,DeviceXYZ,application-usage,User 'user123' used application 'App1',critical,0.19
+2023-09-17T01:42:31,10.0.0.100,safe,192.168.2.6,malicious,guest,DeviceXYZ,permission-changes,Application error: Error message: 96,warning,0.66
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,malicious,user123,Workstation123,application-usage,Application error: Error message: 96,informational,0.93
+2023-09-17T01:42:31,31.15.164.90:27783,safe,192.168.2.6,safe,user123,DeviceXYZ,auth-lockout,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.71
+2023-09-17T01:42:31,10.0.0.100,malicious,192.168.2.6,safe,user123,Workstation123,application-errors,Successful login for user 'anonymous' from IP '192.168.1.100',error,0.1
+2023-09-17T01:42:31,10.0.0.100,safe,10.0.0.101,safe,user123,ServerABC,permission-changes,User 'admin' locked out after multiple failed attempts,critical,0.88
+2023-09-17T01:42:31,10.0.0.2,malicious,10.0.0.3,safe,admin,DeviceXYZ,auth-lockout,System shutdown: Reason2,informational,0.08
+2023-09-17T01:42:31,172.16.0.10,malicious,10.0.0.101,malicious,admin,DeviceXYZ,application-usage,File access: Read to file '/path/to/file120.txt',error,0.54
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.2.6,malicious,user123,Workstation123,permission-changes,File access: Read to file '/path/to/file120.txt',error,0.58
+2023-09-17T01:42:31,10.0.0.2,safe,166.127.213.176,safe,anonymous,Workstation123,system-failure,Successful login for user 'anonymous' from IP '192.168.1.100',critical,0.96
+2023-09-17T01:42:31,10.0.0.100,safe,192.168.10.6,malicious,guest,Workstation123,auth-lockout,System shutdown: Reason2,critical,0.29
+2023-09-17T01:42:31,10.1.1.1,malicious,166.127.213.176,safe,guest,ServerABC,system-shutdown,File access: Read to file '/path/to/file120.txt',error,0.4
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,malicious,admin,ServerABC,file-access,Successful login for user 'anonymous' from IP '192.168.1.100',critical,0.26
+2023-09-17T01:42:31,31.15.164.90:27783,safe,166.127.213.176,safe,user123,Workstation123,system-failure,Critical system failure: Error message: 78,critical,1.0
+2023-09-17T01:42:31,10.0.0.100,malicious,192.168.10.6,malicious,anonymous,Workstation123,application-usage,User 'user123' used application 'App1',warning,0.11
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,malicious,guest,DeviceXYZ,system-shutdown,System shutdown: Reason2,warning,0.96
+2023-09-17T01:42:31,31.15.164.90:27783,safe,192.168.10.6,safe,user123,Workstation123,system-shutdown,Successful login for user 'anonymous' from IP '192.168.1.100',critical,0.24
+2023-09-17T01:42:31,192.168.1.100,safe,192.168.10.6,malicious,guest,DeviceXYZ,auth-lockout,Critical system failure: Error message: 78,informational,0.29
+2023-09-17T01:42:31,10.1.1.1,safe,166.127.213.176,malicious,anonymous,ServerABC,file-access,User 'user123' used application 'App1',informational,0.01
+2023-09-17T01:42:31,192.168.10.5,safe,166.127.213.176,safe,guest,ServerABC,file-access,User 'admin' locked out after multiple failed attempts,informational,0.82
+2023-09-17T01:42:31,172.16.0.10,safe,166.127.213.176,malicious,guest,Workstation123,application-errors,User 'user123' used application 'App1',warning,0.37
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.101,safe,user123,ServerABC,permission-changes,User 'admin' locked out after multiple failed attempts,critical,0.32
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.0.2,malicious,user123,ServerABC,auth-lockout,System shutdown: Reason2,informational,0.32
+2023-09-17T01:42:31,192.168.1.100,safe,192.168.10.6,malicious,user123,Workstation123,auth-lockout,User 'user123' used application 'App1',critical,0.96
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.0.2,safe,guest,Workstation123,auth-lockout,Critical system failure: Error message: 78,informational,0.8
+2023-09-17T01:42:31,10.0.0.2,safe,10.0.0.101,malicious,user123,DeviceXYZ,application-usage,Critical system failure: Error message: 78,critical,0.99
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.10.6,safe,admin,ServerABC,auth-success,System shutdown: Reason2,critical,0.98
+2023-09-17T01:42:31,192.168.10.5,safe,166.127.213.176,malicious,admin,ServerABC,auth-lockout,File access: Read to file '/path/to/file120.txt',warning,0.41
+2023-09-17T01:42:31,192.168.10.5,malicious,166.127.213.176,malicious,admin,ServerABC,auth-lockout,System shutdown: Reason2,warning,0.11
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.3,safe,admin,DeviceXYZ,application-errors,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.35
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.10.6,malicious,guest,ServerABC,application-usage,System shutdown: Reason2,warning,0.55
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.10.6,safe,user123,DeviceXYZ,auth-success,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.27
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.2.6,malicious,user123,Workstation123,permission-changes,User 'admin' locked out after multiple failed attempts,warning,0.81
+2023-09-17T01:42:31,10.0.0.100,malicious,166.127.213.176,safe,anonymous,ServerABC,auth-success,File access: Read to file '/path/to/file120.txt',warning,0.96
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.10.6,safe,admin,DeviceXYZ,file-access,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.3
+2023-09-17T01:42:31,192.168.1.100,malicious,10.0.0.3,safe,guest,DeviceXYZ,auth-lockout,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.49
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,166.127.213.176,safe,user123,DeviceXYZ,auth-success,User 'user123' used application 'App1',warning,0.49
+2023-09-17T01:42:31,172.16.0.10,malicious,10.0.0.101,malicious,anonymous,DeviceXYZ,application-errors,Critical system failure: Error message: 78,warning,0.01
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.3,malicious,anonymous,ServerABC,application-errors,User 'admin' changed permissions for file '/path/to/file.txt',warning,1.0
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.10.6,malicious,anonymous,ServerABC,file-access,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.91
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,malicious,user123,Workstation123,system-shutdown,User 'admin' locked out after multiple failed attempts,informational,0.98
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.10.6,malicious,admin,ServerABC,auth-success,Critical system failure: Error message: 78,warning,0.79
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.3,malicious,admin,ServerABC,auth-lockout,File access: Read to file '/path/to/file120.txt',critical,0.99
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.101,malicious,user123,ServerABC,system-shutdown,System shutdown: Reason2,warning,0.52
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.0.2,malicious,anonymous,Workstation123,file-access,User 'user123' used application 'App1',critical,0.07
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.10.6,malicious,user123,DeviceXYZ,file-access,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.74
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.101,malicious,guest,DeviceXYZ,system-shutdown,System shutdown: Reason2,error,0.32
+2023-09-17T01:42:31,10.0.0.2,safe,10.0.0.3,safe,guest,ServerABC,auth-success,Critical system failure: Error message: 78,warning,0.02
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.2.6,malicious,anonymous,DeviceXYZ,application-errors,Application error: Error message: 96,informational,0.36
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.10.6,malicious,guest,DeviceXYZ,application-usage,User 'user123' used application 'App1',critical,0.24
+2023-09-17T01:42:31,192.168.1.100,malicious,10.0.0.3,malicious,guest,Workstation123,auth-success,System shutdown: Reason2,warning,0.68
+2023-09-17T01:42:31,10.0.0.100,malicious,10.0.0.101,malicious,user123,Workstation123,application-usage,Successful login for user 'anonymous' from IP '192.168.1.100',critical,0.76
+2023-09-17T01:42:31,10.0.0.100,malicious,10.0.0.3,malicious,guest,DeviceXYZ,auth-success,Application error: Error message: 96,error,0.36
+2023-09-17T01:42:31,10.0.0.100,safe,192.168.0.2,malicious,user123,Workstation123,application-errors,System shutdown: Reason2,critical,0.5
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,admin,Workstation123,application-usage,Application error: Error message: 96,error,0.24
+2023-09-17T01:42:31,172.16.0.10,malicious,166.127.213.176,malicious,anonymous,ServerABC,auth-success,File access: Read to file '/path/to/file120.txt',error,0.42
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.10.6,malicious,user123,Workstation123,auth-lockout,Critical system failure: Error message: 78,warning,0.79
+2023-09-17T01:42:31,10.1.1.1,safe,10.0.0.101,safe,admin,ServerABC,system-failure,User 'user123' used application 'App1',error,0.63
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.3,safe,guest,DeviceXYZ,application-errors,User 'admin' locked out after multiple failed attempts,critical,0.14
+2023-09-17T01:42:31,10.1.1.1,safe,10.0.0.101,malicious,guest,DeviceXYZ,system-shutdown,Critical system failure: Error message: 78,warning,0.14
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.0.2,safe,anonymous,Workstation123,permission-changes,Critical system failure: Error message: 78,critical,0.79
+2023-09-17T01:42:31,10.1.1.1,safe,192.168.10.6,safe,admin,DeviceXYZ,file-access,Critical system failure: Error message: 78,error,0.7
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,anonymous,Workstation123,auth-success,Critical system failure: Error message: 78,critical,0.31
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.3,malicious,admin,ServerABC,system-shutdown,User 'admin' locked out after multiple failed attempts,error,0.01
+2023-09-17T01:42:31,10.0.0.100,safe,192.168.2.6,malicious,guest,ServerABC,file-access,Successful login for user 'anonymous' from IP '192.168.1.100',critical,0.86
+2023-09-17T01:42:31,10.0.0.100,malicious,192.168.10.6,malicious,anonymous,DeviceXYZ,file-access,System shutdown: Reason2,critical,0.77
+2023-09-17T01:42:31,10.0.0.100,malicious,10.0.0.101,malicious,guest,Workstation123,file-access,System shutdown: Reason2,critical,0.39
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,malicious,user123,DeviceXYZ,system-failure,File access: Read to file '/path/to/file120.txt',warning,0.07
+2023-09-17T01:42:31,10.0.0.2,safe,10.0.0.101,malicious,anonymous,Workstation123,application-errors,User 'admin' locked out after multiple failed attempts,critical,0.49
+2023-09-17T01:42:31,10.0.0.2,safe,10.0.0.3,malicious,anonymous,Workstation123,system-shutdown,User 'admin' locked out after multiple failed attempts,error,0.82
+2023-09-17T01:42:31,172.16.0.10,safe,10.0.0.101,malicious,admin,Workstation123,application-usage,Application error: Error message: 96,error,0.17
+2023-09-17T01:42:31,10.0.0.100,malicious,10.0.0.101,safe,guest,ServerABC,system-shutdown,User 'user123' used application 'App1',warning,0.93
+2023-09-17T01:42:31,10.1.1.1,safe,192.168.2.6,safe,admin,DeviceXYZ,application-errors,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.65
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.101,safe,user123,DeviceXYZ,system-failure,User 'user123' used application 'App1',informational,0.59
+2023-09-17T01:42:31,10.0.0.100,malicious,166.127.213.176,malicious,anonymous,Workstation123,application-usage,Application error: Error message: 96,warning,0.53
+2023-09-17T01:42:31,10.0.0.100,malicious,192.168.10.6,safe,admin,Workstation123,application-errors,Application error: Error message: 96,critical,0.11
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.10.6,malicious,admin,ServerABC,system-shutdown,System shutdown: Reason2,informational,0.22
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.2.6,malicious,user123,Workstation123,application-errors,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.87
+2023-09-17T01:42:31,10.1.1.1,safe,192.168.10.6,safe,anonymous,Workstation123,system-shutdown,User 'user123' used application 'App1',informational,0.28
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.2.6,malicious,user123,ServerABC,system-shutdown,Application error: Error message: 96,informational,0.78
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.2.6,safe,anonymous,DeviceXYZ,application-usage,File access: Read to file '/path/to/file120.txt',critical,0.77
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.3,malicious,admin,ServerABC,system-failure,Application error: Error message: 96,error,0.47
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,malicious,user123,ServerABC,system-shutdown,Successful login for user 'anonymous' from IP '192.168.1.100',critical,0.32
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.10.6,malicious,anonymous,Workstation123,system-shutdown,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.13
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.10.6,malicious,guest,DeviceXYZ,system-shutdown,Successful login for user 'anonymous' from IP '192.168.1.100',critical,0.8
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.101,safe,anonymous,Workstation123,auth-lockout,Application error: Error message: 96,error,0.19
+2023-09-17T01:42:31,10.0.0.100,safe,192.168.10.6,malicious,anonymous,ServerABC,application-usage,Application error: Error message: 96,error,0.23
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.10.6,malicious,guest,ServerABC,file-access,User 'admin' changed permissions for file '/path/to/file.txt',error,0.09
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.3,malicious,user123,ServerABC,permission-changes,Successful login for user 'anonymous' from IP '192.168.1.100',informational,0.42
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.101,safe,user123,DeviceXYZ,auth-lockout,User 'admin' locked out after multiple failed attempts,error,0.68
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.10.6,safe,anonymous,Workstation123,file-access,User 'user123' used application 'App1',error,0.85
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,guest,DeviceXYZ,auth-success,User 'admin' locked out after multiple failed attempts,critical,0.55
+2023-09-17T01:42:31,10.1.1.1,safe,192.168.0.2,malicious,anonymous,DeviceXYZ,system-shutdown,Application error: Error message: 96,error,0.47
+2023-09-17T01:42:31,172.16.0.10,malicious,166.127.213.176,malicious,guest,Workstation123,application-errors,System shutdown: Reason2,critical,0.54
+2023-09-17T01:42:31,10.0.0.100,safe,192.168.0.2,malicious,anonymous,DeviceXYZ,permission-changes,User 'admin' locked out after multiple failed attempts,critical,0.11
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.101,safe,guest,Workstation123,application-errors,Critical system failure: Error message: 78,error,0.79
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.3,malicious,guest,DeviceXYZ,application-errors,User 'admin' changed permissions for file '/path/to/file.txt',error,0.4
+2023-09-17T01:42:31,10.1.1.1,safe,166.127.213.176,safe,admin,DeviceXYZ,system-failure,File access: Read to file '/path/to/file120.txt',informational,0.73
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.2.6,safe,admin,Workstation123,auth-lockout,File access: Read to file '/path/to/file120.txt',error,0.46
+2023-09-17T01:42:31,192.168.1.100,malicious,10.0.0.101,safe,user123,Workstation123,application-usage,System shutdown: Reason2,critical,0.08
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.3,safe,user123,Workstation123,auth-lockout,Successful login for user 'anonymous' from IP '192.168.1.100',error,0.94
+2023-09-17T01:42:31,10.0.0.100,safe,192.168.10.6,malicious,user123,ServerABC,system-shutdown,Application error: Error message: 96,error,0.49
+2023-09-17T01:42:31,192.168.1.100,safe,192.168.10.6,malicious,admin,ServerABC,application-errors,User 'user123' used application 'App1',critical,0.76
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.0.2,malicious,anonymous,ServerABC,auth-lockout,Application error: Error message: 96,warning,0.05
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.0.2,safe,user123,Workstation123,auth-success,File access: Read to file '/path/to/file120.txt',critical,0.64
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.10.6,malicious,guest,Workstation123,system-shutdown,User 'admin' locked out after multiple failed attempts,warning,0.55
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.101,malicious,user123,Workstation123,system-failure,Application error: Error message: 96,error,0.7
+2023-09-17T01:42:31,172.16.0.10,safe,10.0.0.101,safe,guest,DeviceXYZ,application-errors,User 'admin' changed permissions for file '/path/to/file.txt',informational,0.42
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.0.2,malicious,user123,DeviceXYZ,system-failure,User 'admin' changed permissions for file '/path/to/file.txt',error,0.51
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.101,malicious,admin,Workstation123,system-shutdown,File access: Read to file '/path/to/file120.txt',warning,0.05
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.101,malicious,admin,DeviceXYZ,application-usage,Application error: Error message: 96,critical,0.85
+2023-09-17T01:42:31,10.1.1.1,safe,192.168.2.6,malicious,user123,DeviceXYZ,system-failure,Critical system failure: Error message: 78,informational,0.38
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.0.2,malicious,anonymous,Workstation123,file-access,User 'user123' used application 'App1',error,0.86
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.10.6,malicious,user123,Workstation123,auth-success,User 'user123' used application 'App1',warning,0.58
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,malicious,user123,Workstation123,application-usage,Critical system failure: Error message: 78,warning,0.76
+2023-09-17T01:42:31,10.0.0.100,safe,192.168.10.6,malicious,user123,DeviceXYZ,system-failure,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.36
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.10.6,safe,guest,Workstation123,system-shutdown,File access: Read to file '/path/to/file120.txt',critical,0.7
+2023-09-17T01:42:31,192.168.1.100,malicious,10.0.0.3,malicious,user123,ServerABC,system-shutdown,System shutdown: Reason2,error,0.34
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.3,malicious,anonymous,DeviceXYZ,application-usage,Successful login for user 'anonymous' from IP '192.168.1.100',informational,0.42
+2023-09-17T01:42:31,172.16.0.10,safe,166.127.213.176,safe,guest,DeviceXYZ,application-usage,Critical system failure: Error message: 78,critical,0.18
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.2.6,malicious,guest,DeviceXYZ,permission-changes,User 'user123' used application 'App1',informational,0.69
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.10.6,safe,admin,DeviceXYZ,application-errors,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.36
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.2.6,safe,user123,DeviceXYZ,application-errors,Successful login for user 'anonymous' from IP '192.168.1.100',error,0.69
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.10.6,safe,admin,DeviceXYZ,file-access,User 'user123' used application 'App1',warning,0.58
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.10.6,malicious,guest,ServerABC,auth-lockout,User 'admin' locked out after multiple failed attempts,critical,0.57
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.101,malicious,guest,ServerABC,auth-success,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.67
+2023-09-17T01:42:31,10.1.1.1,safe,192.168.10.6,safe,anonymous,Workstation123,system-failure,Critical system failure: Error message: 78,critical,0.77
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,malicious,anonymous,DeviceXYZ,auth-lockout,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.77
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.10.6,safe,anonymous,Workstation123,application-errors,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.67
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.2.6,safe,admin,Workstation123,system-failure,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.49
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.10.6,safe,anonymous,Workstation123,application-usage,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.17
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.10.6,malicious,guest,DeviceXYZ,auth-success,Successful login for user 'anonymous' from IP '192.168.1.100',informational,0.61
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.101,malicious,guest,Workstation123,auth-success,System shutdown: Reason2,informational,0.16
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.101,malicious,admin,ServerABC,auth-success,User 'admin' locked out after multiple failed attempts,warning,0.82
+2023-09-17T01:42:31,31.15.164.90:27783,safe,166.127.213.176,safe,anonymous,Workstation123,auth-success,System shutdown: Reason2,informational,0.31
+2023-09-17T01:42:31,10.0.0.2,safe,10.0.0.101,safe,guest,ServerABC,auth-lockout,User 'user123' used application 'App1',warning,0.12
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.0.2,safe,anonymous,ServerABC,system-shutdown,Critical system failure: Error message: 78,critical,0.94
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.10.6,safe,anonymous,Workstation123,auth-success,Successful login for user 'anonymous' from IP '192.168.1.100',informational,0.57
+2023-09-17T01:42:31,172.16.0.10,malicious,166.127.213.176,safe,anonymous,DeviceXYZ,application-usage,File access: Read to file '/path/to/file120.txt',informational,0.35
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.10.6,malicious,anonymous,DeviceXYZ,file-access,User 'admin' locked out after multiple failed attempts,warning,0.48
+2023-09-17T01:42:31,10.1.1.1,safe,10.0.0.101,malicious,anonymous,DeviceXYZ,auth-lockout,Application error: Error message: 96,error,0.85
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.2.6,safe,anonymous,Workstation123,auth-lockout,User 'user123' used application 'App1',error,0.17
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,10.0.0.101,malicious,admin,Workstation123,system-failure,Critical system failure: Error message: 78,warning,0.22
+2023-09-17T01:42:31,192.168.10.5,malicious,166.127.213.176,malicious,admin,DeviceXYZ,permission-changes,User 'admin' locked out after multiple failed attempts,informational,0.98
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.10.6,safe,user123,DeviceXYZ,application-usage,Successful login for user 'anonymous' from IP '192.168.1.100',informational,0.65
+2023-09-17T01:42:31,172.16.0.10,malicious,10.0.0.101,malicious,guest,DeviceXYZ,application-errors,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.54
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.2.6,safe,guest,Workstation123,system-failure,Critical system failure: Error message: 78,error,0.46
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.101,safe,admin,ServerABC,auth-lockout,System shutdown: Reason2,error,0.78
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.0.2,safe,user123,ServerABC,file-access,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.85
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.10.6,safe,admin,DeviceXYZ,application-usage,File access: Read to file '/path/to/file120.txt',warning,0.48
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,10.0.0.3,safe,admin,DeviceXYZ,permission-changes,User 'admin' locked out after multiple failed attempts,warning,0.68
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,10.0.0.101,safe,guest,ServerABC,system-failure,User 'admin' locked out after multiple failed attempts,error,0.59
+2023-09-17T01:42:31,10.0.0.2,malicious,10.0.0.101,safe,guest,ServerABC,system-failure,Successful login for user 'anonymous' from IP '192.168.1.100',error,0.66
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,safe,admin,DeviceXYZ,system-failure,User 'user123' used application 'App1',warning,0.23
+2023-09-17T01:42:31,172.16.0.10,malicious,10.0.0.101,malicious,admin,DeviceXYZ,application-usage,Critical system failure: Error message: 78,error,0.86
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.0.2,malicious,anonymous,ServerABC,system-shutdown,Critical system failure: Error message: 78,critical,0.85
+2023-09-17T01:42:31,10.1.1.1,malicious,10.0.0.101,safe,guest,ServerABC,file-access,Successful login for user 'anonymous' from IP '192.168.1.100',critical,0.11
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.0.2,safe,guest,Workstation123,system-failure,Successful login for user 'anonymous' from IP '192.168.1.100',informational,0.77
+2023-09-17T01:42:31,10.1.1.1,malicious,10.0.0.101,safe,user123,Workstation123,permission-changes,User 'admin' changed permissions for file '/path/to/file.txt',error,0.32
+2023-09-17T01:42:31,10.0.0.100,malicious,192.168.10.6,safe,guest,ServerABC,application-errors,Application error: Error message: 96,critical,0.48
+2023-09-17T01:42:31,31.15.164.90:27783,safe,192.168.2.6,malicious,user123,DeviceXYZ,file-access,Critical system failure: Error message: 78,critical,0.13
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,malicious,admin,ServerABC,file-access,Critical system failure: Error message: 78,error,0.04
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.0.2,malicious,user123,Workstation123,file-access,Application error: Error message: 96,error,0.97
+2023-09-17T01:42:31,192.168.1.100,safe,192.168.10.6,malicious,user123,ServerABC,permission-changes,Application error: Error message: 96,error,0.52
+2023-09-17T01:42:31,10.0.0.2,safe,10.0.0.101,safe,admin,ServerABC,file-access,Application error: Error message: 96,warning,0.32
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.10.6,safe,user123,DeviceXYZ,permission-changes,System shutdown: Reason2,critical,0.59
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.3,malicious,anonymous,ServerABC,auth-lockout,Application error: Error message: 96,warning,0.61
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.0.2,safe,admin,ServerABC,application-errors,File access: Read to file '/path/to/file120.txt',warning,0.55
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.0.2,malicious,admin,ServerABC,application-errors,System shutdown: Reason2,informational,0.71
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.2.6,malicious,admin,Workstation123,auth-lockout,User 'admin' locked out after multiple failed attempts,informational,0.27
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.10.6,malicious,anonymous,Workstation123,application-usage,Application error: Error message: 96,informational,0.39
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.101,malicious,anonymous,DeviceXYZ,auth-success,Critical system failure: Error message: 78,warning,0.64
+2023-09-17T01:42:31,192.168.1.100,safe,192.168.0.2,safe,user123,Workstation123,application-errors,File access: Read to file '/path/to/file120.txt',critical,0.24
+2023-09-17T01:42:31,192.168.1.100,malicious,10.0.0.101,safe,anonymous,ServerABC,file-access,Successful login for user 'anonymous' from IP '192.168.1.100',informational,0.73
+2023-09-17T01:42:31,10.0.0.2,safe,10.0.0.101,malicious,anonymous,ServerABC,auth-success,User 'user123' used application 'App1',warning,0.19
+2023-09-17T01:42:31,172.16.0.10,safe,10.0.0.101,safe,anonymous,ServerABC,system-shutdown,User 'admin' locked out after multiple failed attempts,error,0.77
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.2.6,malicious,admin,ServerABC,application-errors,File access: Read to file '/path/to/file120.txt',warning,0.98
+2023-09-17T01:42:31,192.168.1.100,malicious,10.0.0.101,safe,guest,Workstation123,system-failure,User 'admin' locked out after multiple failed attempts,informational,0.57
+2023-09-17T01:42:31,31.15.164.90:27783,safe,166.127.213.176,safe,admin,DeviceXYZ,auth-lockout,System shutdown: Reason2,informational,0.16
+2023-09-17T01:42:31,10.1.1.1,safe,10.0.0.3,safe,user123,ServerABC,system-failure,Application error: Error message: 96,informational,0.07
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.101,safe,user123,DeviceXYZ,file-access,System shutdown: Reason2,informational,0.81
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,10.0.0.101,safe,anonymous,Workstation123,auth-success,User 'admin' locked out after multiple failed attempts,error,0.89
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.10.6,malicious,user123,ServerABC,application-usage,Application error: Error message: 96,critical,0.72
+2023-09-17T01:42:31,10.1.1.1,malicious,10.0.0.101,malicious,admin,Workstation123,auth-success,Application error: Error message: 96,error,0.71
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.2.6,malicious,admin,Workstation123,application-usage,Successful login for user 'anonymous' from IP '192.168.1.100',error,0.9
+2023-09-17T01:42:31,10.0.0.100,safe,166.127.213.176,safe,anonymous,ServerABC,application-errors,System shutdown: Reason2,error,0.03
+2023-09-17T01:42:31,10.0.0.100,malicious,166.127.213.176,malicious,anonymous,Workstation123,application-errors,User 'admin' changed permissions for file '/path/to/file.txt',informational,0.89
+2023-09-17T01:42:31,10.0.0.100,safe,192.168.10.6,safe,admin,ServerABC,application-usage,User 'admin' changed permissions for file '/path/to/file.txt',error,0.27
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.2.6,malicious,anonymous,Workstation123,system-shutdown,User 'admin' changed permissions for file '/path/to/file.txt',error,0.23
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,10.0.0.101,safe,guest,ServerABC,auth-success,User 'user123' used application 'App1',informational,0.39
+2023-09-17T01:42:31,172.16.0.10,malicious,10.0.0.101,malicious,guest,ServerABC,auth-lockout,File access: Read to file '/path/to/file120.txt',informational,0.55
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,malicious,user123,ServerABC,auth-lockout,Successful login for user 'anonymous' from IP '192.168.1.100',warning,1.0
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.0.2,malicious,admin,Workstation123,system-shutdown,User 'admin' changed permissions for file '/path/to/file.txt',error,0.56
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.2.6,malicious,admin,Workstation123,system-failure,System shutdown: Reason2,warning,0.7
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.10.6,malicious,anonymous,DeviceXYZ,auth-lockout,System shutdown: Reason2,error,0.46
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.101,malicious,admin,ServerABC,application-errors,Critical system failure: Error message: 78,warning,0.56
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.0.2,safe,guest,DeviceXYZ,application-errors,Successful login for user 'anonymous' from IP '192.168.1.100',critical,0.38
+2023-09-17T01:42:31,192.168.1.100,malicious,10.0.0.101,malicious,user123,ServerABC,file-access,Application error: Error message: 96,critical,0.03
+2023-09-17T01:42:31,10.0.0.100,safe,10.0.0.3,malicious,anonymous,ServerABC,application-errors,File access: Read to file '/path/to/file120.txt',error,0.49
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.10.6,safe,admin,ServerABC,application-errors,Application error: Error message: 96,error,0.17
+2023-09-17T01:42:31,172.16.0.10,malicious,10.0.0.101,safe,guest,ServerABC,system-failure,User 'user123' used application 'App1',warning,0.4
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,166.127.213.176,safe,anonymous,Workstation123,auth-success,File access: Read to file '/path/to/file120.txt',informational,0.32
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.0.2,safe,anonymous,ServerABC,permission-changes,Critical system failure: Error message: 78,warning,0.25
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.2.6,malicious,anonymous,ServerABC,application-errors,User 'user123' used application 'App1',error,0.51
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.101,malicious,anonymous,Workstation123,auth-lockout,User 'user123' used application 'App1',critical,0.98
+2023-09-17T01:42:31,192.168.1.100,malicious,166.127.213.176,safe,admin,ServerABC,application-errors,System shutdown: Reason2,warning,0.11
+2023-09-17T01:42:31,31.15.164.90:27783,safe,192.168.2.6,malicious,guest,Workstation123,system-failure,User 'admin' locked out after multiple failed attempts,warning,0.49
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.10.6,malicious,admin,ServerABC,permission-changes,Application error: Error message: 96,warning,0.52
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,10.0.0.101,malicious,user123,Workstation123,permission-changes,File access: Read to file '/path/to/file120.txt',informational,0.21
+2023-09-17T01:42:31,192.168.1.100,malicious,10.0.0.101,malicious,guest,DeviceXYZ,system-shutdown,System shutdown: Reason2,critical,0.48
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,admin,ServerABC,system-shutdown,System shutdown: Reason2,warning,0.27
+2023-09-17T01:42:31,10.0.0.100,malicious,10.0.0.101,safe,admin,ServerABC,permission-changes,Critical system failure: Error message: 78,warning,0.15
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.2.6,malicious,anonymous,ServerABC,permission-changes,Critical system failure: Error message: 78,informational,0.03
+2023-09-17T01:42:31,10.0.0.100,safe,192.168.0.2,malicious,anonymous,Workstation123,system-shutdown,Critical system failure: Error message: 78,warning,0.06
+2023-09-17T01:42:31,10.1.1.1,safe,166.127.213.176,safe,anonymous,ServerABC,application-usage,Critical system failure: Error message: 78,warning,0.71
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.10.6,malicious,anonymous,DeviceXYZ,auth-lockout,System shutdown: Reason2,critical,0.76
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.101,safe,admin,ServerABC,system-shutdown,User 'user123' used application 'App1',critical,0.76
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,safe,guest,Workstation123,auth-success,File access: Read to file '/path/to/file120.txt',warning,0.99
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.0.2,safe,user123,ServerABC,permission-changes,User 'admin' locked out after multiple failed attempts,critical,0.56
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.0.2,safe,anonymous,ServerABC,system-failure,System shutdown: Reason2,informational,0.63
+2023-09-17T01:42:31,10.1.1.1,safe,192.168.0.2,malicious,anonymous,ServerABC,application-usage,Application error: Error message: 96,critical,0.02
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.3,safe,user123,ServerABC,application-usage,System shutdown: Reason2,informational,0.9
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.10.6,safe,anonymous,DeviceXYZ,auth-success,Application error: Error message: 96,critical,0.6
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.2.6,malicious,admin,Workstation123,system-shutdown,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.38
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.0.2,malicious,user123,ServerABC,system-shutdown,User 'admin' changed permissions for file '/path/to/file.txt',error,0.54
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.101,malicious,user123,DeviceXYZ,permission-changes,Critical system failure: Error message: 78,error,0.59
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,user123,ServerABC,system-failure,User 'user123' used application 'App1',error,0.82
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.10.6,malicious,user123,DeviceXYZ,system-shutdown,System shutdown: Reason2,informational,0.09
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,safe,user123,Workstation123,system-failure,User 'user123' used application 'App1',informational,0.86
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.3,malicious,anonymous,ServerABC,application-errors,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.45
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.101,malicious,anonymous,DeviceXYZ,permission-changes,Critical system failure: Error message: 78,warning,0.73
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.10.6,malicious,guest,DeviceXYZ,permission-changes,Application error: Error message: 96,warning,0.52
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.101,safe,admin,DeviceXYZ,application-errors,User 'admin' locked out after multiple failed attempts,warning,0.94
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.101,malicious,guest,ServerABC,application-errors,System shutdown: Reason2,informational,0.06
+2023-09-17T01:42:31,10.1.1.1,safe,10.0.0.101,malicious,guest,ServerABC,system-shutdown,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.42
+2023-09-17T01:42:31,172.16.0.10,safe,10.0.0.101,safe,admin,Workstation123,file-access,User 'user123' used application 'App1',error,0.88
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.0.2,malicious,guest,DeviceXYZ,system-failure,Critical system failure: Error message: 78,error,0.16
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.10.6,safe,admin,DeviceXYZ,application-usage,File access: Read to file '/path/to/file120.txt',critical,0.39
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.10.6,safe,user123,DeviceXYZ,permission-changes,Application error: Error message: 96,critical,0.11
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.101,malicious,admin,DeviceXYZ,permission-changes,Application error: Error message: 96,error,0.03
+2023-09-17T01:42:31,31.15.164.90:27783,safe,192.168.10.6,malicious,anonymous,DeviceXYZ,auth-lockout,Critical system failure: Error message: 78,warning,0.68
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.101,safe,guest,Workstation123,system-shutdown,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.84
+2023-09-17T01:42:31,192.168.1.100,safe,166.127.213.176,safe,anonymous,Workstation123,auth-lockout,User 'admin' changed permissions for file '/path/to/file.txt',error,0.6
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.2.6,malicious,user123,DeviceXYZ,application-usage,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.66
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.3,malicious,anonymous,ServerABC,application-errors,User 'user123' used application 'App1',error,0.89
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.2.6,malicious,anonymous,DeviceXYZ,application-errors,Critical system failure: Error message: 78,error,0.39
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,user123,DeviceXYZ,system-failure,User 'admin' locked out after multiple failed attempts,critical,0.35
+2023-09-17T01:42:31,10.1.1.1,safe,192.168.10.6,malicious,guest,DeviceXYZ,file-access,Critical system failure: Error message: 78,error,0.35
+2023-09-17T01:42:31,10.0.0.2,safe,10.0.0.101,safe,anonymous,Workstation123,application-errors,User 'admin' locked out after multiple failed attempts,informational,0.72
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.101,malicious,anonymous,ServerABC,application-usage,User 'user123' used application 'App1',informational,0.11
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,malicious,guest,DeviceXYZ,file-access,User 'admin' locked out after multiple failed attempts,informational,0.79
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.3,safe,anonymous,DeviceXYZ,system-shutdown,User 'user123' used application 'App1',error,0.91
+2023-09-17T01:42:31,10.0.0.100,malicious,10.0.0.101,malicious,guest,ServerABC,application-errors,Critical system failure: Error message: 78,informational,0.79
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.2.6,malicious,user123,Workstation123,application-usage,File access: Read to file '/path/to/file120.txt',error,0.08
+2023-09-17T01:42:31,172.16.0.10,safe,10.0.0.3,safe,anonymous,DeviceXYZ,system-shutdown,Successful login for user 'anonymous' from IP '192.168.1.100',error,0.35
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,safe,admin,DeviceXYZ,auth-lockout,User 'admin' locked out after multiple failed attempts,warning,0.77
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.10.6,safe,anonymous,Workstation123,system-failure,User 'user123' used application 'App1',warning,0.82
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.0.2,malicious,user123,DeviceXYZ,auth-success,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.43
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.101,safe,guest,ServerABC,system-failure,User 'user123' used application 'App1',warning,0.81
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,guest,DeviceXYZ,application-usage,Application error: Error message: 96,critical,0.15
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.2.6,safe,guest,DeviceXYZ,system-shutdown,System shutdown: Reason2,informational,0.61
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.2.6,malicious,user123,DeviceXYZ,auth-lockout,System shutdown: Reason2,warning,0.23
+2023-09-17T01:42:31,10.0.0.100,safe,192.168.10.6,malicious,admin,DeviceXYZ,file-access,File access: Read to file '/path/to/file120.txt',error,0.53
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,malicious,anonymous,DeviceXYZ,system-failure,User 'user123' used application 'App1',critical,0.37
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.0.2,malicious,admin,DeviceXYZ,application-errors,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.94
+2023-09-17T01:42:31,10.1.1.1,safe,192.168.0.2,safe,user123,DeviceXYZ,permission-changes,User 'user123' used application 'App1',error,0.0
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.101,malicious,guest,DeviceXYZ,file-access,Critical system failure: Error message: 78,error,0.18
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.10.6,malicious,user123,ServerABC,auth-success,System shutdown: Reason2,error,0.76
+2023-09-17T01:42:31,10.1.1.1,safe,192.168.10.6,safe,anonymous,DeviceXYZ,file-access,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.31
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,safe,anonymous,DeviceXYZ,auth-success,Application error: Error message: 96,critical,0.21
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.2.6,safe,user123,Workstation123,system-failure,User 'admin' changed permissions for file '/path/to/file.txt',error,0.89
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.2.6,safe,anonymous,ServerABC,file-access,Application error: Error message: 96,error,0.32
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.2.6,malicious,anonymous,ServerABC,system-failure,Application error: Error message: 96,error,0.24
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,anonymous,Workstation123,auth-lockout,Successful login for user 'anonymous' from IP '192.168.1.100',error,0.18
+2023-09-17T01:42:31,10.0.0.100,safe,10.0.0.101,malicious,guest,Workstation123,auth-lockout,User 'admin' changed permissions for file '/path/to/file.txt',informational,0.64
+2023-09-17T01:42:31,192.168.1.100,safe,192.168.10.6,malicious,anonymous,DeviceXYZ,application-errors,Application error: Error message: 96,warning,0.28
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.101,safe,admin,Workstation123,permission-changes,User 'user123' used application 'App1',warning,0.79
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.0.2,safe,admin,Workstation123,application-usage,System shutdown: Reason2,informational,0.76
+2023-09-17T01:42:31,10.1.1.1,safe,10.0.0.101,malicious,guest,DeviceXYZ,permission-changes,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.43
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.101,malicious,guest,DeviceXYZ,application-usage,User 'user123' used application 'App1',error,0.98
+2023-09-17T01:42:31,10.0.0.100,malicious,192.168.2.6,safe,anonymous,Workstation123,system-failure,Critical system failure: Error message: 78,error,0.54
+2023-09-17T01:42:31,192.168.1.100,safe,192.168.2.6,malicious,user123,Workstation123,permission-changes,User 'user123' used application 'App1',warning,0.91
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.10.6,malicious,anonymous,ServerABC,file-access,Critical system failure: Error message: 78,warning,0.57
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.2.6,safe,user123,ServerABC,application-errors,User 'admin' locked out after multiple failed attempts,informational,0.47
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.10.6,malicious,admin,Workstation123,file-access,User 'admin' changed permissions for file '/path/to/file.txt',error,0.85
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.101,safe,admin,ServerABC,file-access,Successful login for user 'anonymous' from IP '192.168.1.100',informational,0.7
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.101,malicious,anonymous,Workstation123,file-access,User 'user123' used application 'App1',warning,0.91
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.10.6,malicious,admin,DeviceXYZ,application-errors,Critical system failure: Error message: 78,informational,0.03
+2023-09-17T01:42:31,10.1.1.1,safe,192.168.10.6,safe,user123,ServerABC,auth-lockout,User 'admin' locked out after multiple failed attempts,error,0.96
+2023-09-17T01:42:31,192.168.1.100,safe,192.168.10.6,malicious,admin,ServerABC,auth-success,Application error: Error message: 96,error,0.72
+2023-09-17T01:42:31,10.1.1.1,malicious,10.0.0.101,malicious,admin,Workstation123,application-usage,System shutdown: Reason2,warning,0.07
+2023-09-17T01:42:31,10.1.1.1,safe,192.168.10.6,malicious,anonymous,ServerABC,auth-success,User 'admin' changed permissions for file '/path/to/file.txt',error,0.73
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.2.6,safe,anonymous,ServerABC,application-usage,Successful login for user 'anonymous' from IP '192.168.1.100',critical,0.05
+2023-09-17T01:42:31,192.168.1.100,malicious,10.0.0.101,malicious,user123,Workstation123,auth-success,Successful login for user 'anonymous' from IP '192.168.1.100',informational,0.52
+2023-09-17T01:42:31,172.16.0.10,safe,10.0.0.3,malicious,admin,DeviceXYZ,auth-lockout,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.58
+2023-09-17T01:42:31,172.16.0.10,safe,10.0.0.101,safe,user123,ServerABC,application-usage,Application error: Error message: 96,critical,0.07
+2023-09-17T01:42:31,10.1.1.1,safe,10.0.0.3,safe,admin,Workstation123,file-access,User 'admin' locked out after multiple failed attempts,informational,0.12
+2023-09-17T01:42:31,31.15.164.90:27783,safe,192.168.2.6,malicious,user123,DeviceXYZ,application-errors,System shutdown: Reason2,error,0.44
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.101,malicious,anonymous,DeviceXYZ,auth-lockout,File access: Read to file '/path/to/file120.txt',critical,0.69
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.3,safe,anonymous,Workstation123,file-access,User 'user123' used application 'App1',critical,0.35
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,10.0.0.3,malicious,admin,ServerABC,permission-changes,User 'admin' locked out after multiple failed attempts,informational,0.14
+2023-09-17T01:42:31,10.0.0.2,malicious,10.0.0.101,safe,anonymous,ServerABC,auth-lockout,User 'admin' locked out after multiple failed attempts,warning,0.71
+2023-09-17T01:42:31,192.168.1.100,malicious,10.0.0.3,malicious,anonymous,DeviceXYZ,system-shutdown,User 'admin' locked out after multiple failed attempts,error,0.61
+2023-09-17T01:42:31,10.0.0.100,malicious,192.168.0.2,malicious,guest,Workstation123,auth-success,Critical system failure: Error message: 78,error,0.85
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.2.6,malicious,guest,ServerABC,system-shutdown,Successful login for user 'anonymous' from IP '192.168.1.100',informational,0.63
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.3,malicious,anonymous,ServerABC,system-failure,Application error: Error message: 96,warning,0.85
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,10.0.0.3,safe,user123,DeviceXYZ,application-usage,User 'admin' locked out after multiple failed attempts,error,0.67
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.2.6,malicious,admin,DeviceXYZ,file-access,System shutdown: Reason2,error,0.72
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,user123,ServerABC,system-failure,File access: Read to file '/path/to/file120.txt',critical,0.88
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.0.2,safe,anonymous,Workstation123,system-shutdown,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.32
+2023-09-17T01:42:31,10.0.0.100,malicious,10.0.0.101,malicious,admin,DeviceXYZ,file-access,User 'admin' changed permissions for file '/path/to/file.txt',error,0.5
+2023-09-17T01:42:31,10.0.0.2,malicious,10.0.0.3,safe,user123,ServerABC,application-usage,User 'admin' locked out after multiple failed attempts,informational,0.57
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,10.0.0.101,safe,admin,Workstation123,system-failure,File access: Read to file '/path/to/file120.txt',warning,0.84
+2023-09-17T01:42:31,192.168.1.100,malicious,10.0.0.101,safe,anonymous,DeviceXYZ,file-access,Application error: Error message: 96,informational,0.74
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.0.2,malicious,user123,DeviceXYZ,file-access,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.36
+2023-09-17T01:42:31,10.0.0.2,malicious,10.0.0.101,safe,guest,ServerABC,system-failure,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.98
+2023-09-17T01:42:31,10.1.1.1,safe,192.168.10.6,malicious,admin,Workstation123,file-access,Critical system failure: Error message: 78,warning,0.72
+2023-09-17T01:42:31,10.0.0.100,safe,192.168.10.6,malicious,anonymous,DeviceXYZ,application-usage,Successful login for user 'anonymous' from IP '192.168.1.100',critical,0.15
+2023-09-17T01:42:31,10.0.0.100,malicious,166.127.213.176,malicious,user123,DeviceXYZ,auth-lockout,User 'admin' locked out after multiple failed attempts,error,0.66
+2023-09-17T01:42:31,192.168.1.100,malicious,10.0.0.101,malicious,guest,DeviceXYZ,file-access,Application error: Error message: 96,critical,0.78
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.0.2,safe,admin,Workstation123,application-usage,System shutdown: Reason2,informational,0.55
+2023-09-17T01:42:31,10.0.0.2,malicious,10.0.0.101,safe,guest,Workstation123,application-usage,File access: Read to file '/path/to/file120.txt',warning,0.21
+2023-09-17T01:42:31,172.16.0.10,safe,166.127.213.176,malicious,admin,DeviceXYZ,auth-lockout,User 'admin' locked out after multiple failed attempts,critical,0.44
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.10.6,malicious,guest,DeviceXYZ,file-access,User 'user123' used application 'App1',warning,0.81
+2023-09-17T01:42:31,10.0.0.100,safe,192.168.10.6,malicious,guest,DeviceXYZ,system-shutdown,User 'admin' locked out after multiple failed attempts,warning,0.66
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.2.6,malicious,guest,Workstation123,auth-lockout,User 'user123' used application 'App1',critical,0.1
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.101,malicious,user123,Workstation123,auth-lockout,Critical system failure: Error message: 78,informational,0.91
+2023-09-17T01:42:31,192.168.1.100,safe,192.168.10.6,malicious,anonymous,DeviceXYZ,application-usage,Application error: Error message: 96,warning,0.33
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.2.6,malicious,guest,Workstation123,system-shutdown,User 'admin' changed permissions for file '/path/to/file.txt',error,0.73
+2023-09-17T01:42:31,10.0.0.100,malicious,192.168.10.6,safe,anonymous,ServerABC,application-usage,User 'admin' locked out after multiple failed attempts,error,0.82
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,10.0.0.101,safe,guest,ServerABC,auth-success,File access: Read to file '/path/to/file120.txt',error,0.49
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,malicious,guest,Workstation123,file-access,Critical system failure: Error message: 78,informational,0.6
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.10.6,safe,admin,DeviceXYZ,application-usage,Critical system failure: Error message: 78,critical,0.1
+2023-09-17T01:42:31,10.0.0.100,malicious,10.0.0.3,malicious,user123,DeviceXYZ,auth-lockout,User 'user123' used application 'App1',warning,0.53
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.10.6,malicious,admin,DeviceXYZ,system-shutdown,User 'admin' locked out after multiple failed attempts,error,0.79
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.2.6,malicious,guest,Workstation123,permission-changes,User 'admin' locked out after multiple failed attempts,warning,0.61
+2023-09-17T01:42:31,10.0.0.100,malicious,10.0.0.101,safe,admin,Workstation123,permission-changes,Application error: Error message: 96,warning,0.59
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.2.6,malicious,guest,DeviceXYZ,application-errors,System shutdown: Reason2,warning,0.21
+2023-09-17T01:42:31,172.16.0.10,safe,10.0.0.101,safe,user123,DeviceXYZ,permission-changes,User 'admin' locked out after multiple failed attempts,error,0.34
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.0.2,safe,guest,ServerABC,auth-success,File access: Read to file '/path/to/file120.txt',informational,0.3
+2023-09-17T01:42:31,10.0.0.2,safe,10.0.0.101,safe,user123,Workstation123,system-failure,User 'admin' locked out after multiple failed attempts,error,0.38
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,malicious,guest,DeviceXYZ,application-usage,Critical system failure: Error message: 78,critical,0.21
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.10.6,malicious,admin,Workstation123,application-usage,User 'user123' used application 'App1',critical,0.28
+2023-09-17T01:42:31,192.168.10.5,safe,166.127.213.176,safe,user123,DeviceXYZ,application-usage,User 'admin' locked out after multiple failed attempts,error,0.89
+2023-09-17T01:42:31,192.168.1.100,malicious,166.127.213.176,malicious,user123,DeviceXYZ,system-shutdown,Application error: Error message: 96,critical,0.06
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.3,safe,user123,DeviceXYZ,system-failure,User 'admin' changed permissions for file '/path/to/file.txt',informational,0.56
+2023-09-17T01:42:31,192.168.1.100,malicious,10.0.0.101,malicious,user123,ServerABC,application-usage,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.91
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.0.2,safe,guest,ServerABC,file-access,User 'user123' used application 'App1',error,0.27
+2023-09-17T01:42:31,10.1.1.1,malicious,10.0.0.101,malicious,user123,Workstation123,auth-lockout,User 'admin' locked out after multiple failed attempts,warning,0.3
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,10.0.0.3,safe,admin,ServerABC,permission-changes,User 'user123' used application 'App1',warning,0.69
+2023-09-17T01:42:31,172.16.0.10,safe,10.0.0.101,safe,admin,Workstation123,permission-changes,Successful login for user 'anonymous' from IP '192.168.1.100',error,0.18
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.10.6,malicious,anonymous,Workstation123,auth-lockout,Critical system failure: Error message: 78,error,0.92
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.0.2,malicious,user123,ServerABC,auth-lockout,User 'user123' used application 'App1',critical,0.22
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.10.6,safe,guest,Workstation123,system-failure,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.03
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.101,malicious,guest,DeviceXYZ,file-access,Critical system failure: Error message: 78,critical,0.68
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.10.6,safe,guest,Workstation123,system-failure,User 'admin' locked out after multiple failed attempts,critical,0.22
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.101,malicious,admin,DeviceXYZ,auth-success,Critical system failure: Error message: 78,critical,0.23
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.2.6,safe,guest,DeviceXYZ,auth-success,User 'user123' used application 'App1',warning,0.88
+2023-09-17T01:42:31,10.0.0.2,malicious,166.127.213.176,safe,anonymous,DeviceXYZ,permission-changes,User 'admin' changed permissions for file '/path/to/file.txt',informational,0.94
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.3,safe,admin,Workstation123,auth-success,System shutdown: Reason2,error,0.84
+2023-09-17T01:42:31,31.15.164.90:27783,safe,192.168.10.6,safe,user123,ServerABC,auth-success,Application error: Error message: 96,informational,0.75
+2023-09-17T01:42:31,192.168.1.100,safe,192.168.10.6,malicious,user123,Workstation123,system-failure,System shutdown: Reason2,warning,0.47
+2023-09-17T01:42:31,192.168.10.5,malicious,166.127.213.176,safe,admin,ServerABC,system-failure,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.32
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,admin,Workstation123,system-failure,User 'user123' used application 'App1',warning,0.27
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.10.6,safe,anonymous,Workstation123,system-shutdown,System shutdown: Reason2,error,0.96
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.2.6,malicious,user123,Workstation123,system-failure,User 'user123' used application 'App1',informational,0.5
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.3,malicious,admin,ServerABC,auth-success,User 'admin' changed permissions for file '/path/to/file.txt',error,0.88
+2023-09-17T01:42:31,172.16.0.10,malicious,166.127.213.176,safe,guest,DeviceXYZ,permission-changes,Application error: Error message: 96,critical,0.59
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.0.2,safe,admin,Workstation123,auth-lockout,User 'admin' locked out after multiple failed attempts,informational,0.93
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,192.168.10.6,safe,anonymous,Workstation123,auth-lockout,User 'admin' locked out after multiple failed attempts,critical,0.26
+2023-09-17T01:42:31,192.168.1.100,safe,166.127.213.176,safe,anonymous,Workstation123,system-failure,File access: Read to file '/path/to/file120.txt',error,0.37
+2023-09-17T01:42:31,172.16.0.10,safe,10.0.0.3,safe,guest,ServerABC,system-failure,Successful login for user 'anonymous' from IP '192.168.1.100',informational,0.56
+2023-09-17T01:42:31,10.0.0.100,malicious,192.168.10.6,safe,guest,Workstation123,system-failure,File access: Read to file '/path/to/file120.txt',warning,0.54
+2023-09-17T01:42:31,172.16.0.10,malicious,166.127.213.176,malicious,admin,DeviceXYZ,auth-lockout,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.72
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.10.6,malicious,admin,ServerABC,permission-changes,User 'user123' used application 'App1',error,0.66
+2023-09-17T01:42:31,172.16.0.10,safe,10.0.0.3,malicious,anonymous,DeviceXYZ,application-usage,Critical system failure: Error message: 78,error,0.57
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.0.2,safe,user123,ServerABC,system-failure,File access: Read to file '/path/to/file120.txt',informational,0.73
+2023-09-17T01:42:31,192.168.1.100,safe,192.168.2.6,malicious,admin,Workstation123,system-shutdown,File access: Read to file '/path/to/file120.txt',critical,0.23
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.2.6,safe,user123,Workstation123,system-failure,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.44
+2023-09-17T01:42:31,31.15.164.90:27783,safe,192.168.0.2,malicious,admin,DeviceXYZ,auth-lockout,System shutdown: Reason2,warning,0.36
+2023-09-17T01:42:31,10.0.0.100,malicious,192.168.0.2,malicious,admin,ServerABC,auth-success,File access: Read to file '/path/to/file120.txt',warning,0.57
+2023-09-17T01:42:31,172.16.0.10,safe,10.0.0.3,safe,anonymous,Workstation123,file-access,Successful login for user 'anonymous' from IP '192.168.1.100',critical,0.56
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.10.6,safe,guest,DeviceXYZ,system-shutdown,User 'admin' locked out after multiple failed attempts,warning,0.24
+2023-09-17T01:42:31,192.168.1.100,safe,192.168.0.2,safe,user123,Workstation123,application-usage,User 'user123' used application 'App1',informational,0.53
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,anonymous,Workstation123,system-failure,File access: Read to file '/path/to/file120.txt',critical,0.56
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.10.6,malicious,anonymous,DeviceXYZ,auth-lockout,User 'user123' used application 'App1',error,0.61
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.10.6,malicious,anonymous,DeviceXYZ,application-usage,User 'admin' changed permissions for file '/path/to/file.txt',critical,0.08
+2023-09-17T01:42:31,31.15.164.90:27783,safe,192.168.0.2,malicious,guest,DeviceXYZ,auth-lockout,System shutdown: Reason2,warning,0.8
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.10.6,safe,guest,ServerABC,system-failure,Successful login for user 'anonymous' from IP '192.168.1.100',critical,0.62
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.101,malicious,user123,Workstation123,file-access,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.17
+2023-09-17T01:42:31,10.1.1.1,safe,192.168.2.6,malicious,guest,Workstation123,application-errors,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.1
+2023-09-17T01:42:31,10.0.0.100,safe,10.0.0.101,malicious,admin,ServerABC,application-errors,User 'admin' locked out after multiple failed attempts,critical,0.1
+2023-09-17T01:42:31,31.15.164.90:27783,safe,192.168.2.6,malicious,anonymous,DeviceXYZ,application-usage,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.94
+2023-09-17T01:42:31,192.168.10.5,malicious,10.0.0.3,safe,user123,Workstation123,system-failure,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.49
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.0.2,malicious,guest,Workstation123,application-usage,File access: Read to file '/path/to/file120.txt',error,0.07
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,safe,guest,DeviceXYZ,application-errors,User 'user123' used application 'App1',error,0.91
+2023-09-17T01:42:31,192.168.1.100,safe,166.127.213.176,malicious,guest,DeviceXYZ,permission-changes,User 'user123' used application 'App1',critical,0.51
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.2.6,malicious,anonymous,Workstation123,auth-lockout,User 'user123' used application 'App1',error,0.13
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.101,malicious,user123,Workstation123,auth-lockout,File access: Read to file '/path/to/file120.txt',critical,0.36
+2023-09-17T01:42:31,10.0.0.2,malicious,166.127.213.176,safe,user123,Workstation123,auth-success,Application error: Error message: 96,error,0.97
+2023-09-17T01:42:31,172.16.0.10,malicious,166.127.213.176,malicious,guest,DeviceXYZ,system-shutdown,File access: Read to file '/path/to/file120.txt',critical,0.75
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,malicious,anonymous,ServerABC,permission-changes,User 'admin' changed permissions for file '/path/to/file.txt',informational,0.67
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.10.6,safe,user123,ServerABC,auth-lockout,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.92
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,guest,DeviceXYZ,system-failure,Critical system failure: Error message: 78,warning,0.22
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,safe,guest,ServerABC,system-shutdown,User 'admin' locked out after multiple failed attempts,error,0.53
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.10.6,safe,anonymous,Workstation123,system-shutdown,User 'admin' changed permissions for file '/path/to/file.txt',error,0.77
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.0.2,malicious,admin,ServerABC,application-errors,Application error: Error message: 96,warning,0.2
+2023-09-17T01:42:31,10.0.0.100,malicious,10.0.0.101,malicious,guest,Workstation123,application-errors,System shutdown: Reason2,error,0.94
+2023-09-17T01:42:31,10.1.1.1,malicious,166.127.213.176,malicious,anonymous,ServerABC,auth-lockout,Critical system failure: Error message: 78,critical,0.83
+2023-09-17T01:42:31,172.16.0.10,malicious,192.168.10.6,malicious,user123,Workstation123,system-shutdown,File access: Read to file '/path/to/file120.txt',informational,0.37
+2023-09-17T01:42:31,192.168.1.100,safe,10.0.0.101,malicious,guest,DeviceXYZ,permission-changes,Application error: Error message: 96,warning,0.02
+2023-09-17T01:42:31,10.0.0.100,malicious,192.168.10.6,malicious,anonymous,DeviceXYZ,system-shutdown,User 'admin' locked out after multiple failed attempts,error,0.86
+2023-09-17T01:42:31,31.15.164.90:27783,safe,166.127.213.176,safe,anonymous,Workstation123,file-access,User 'admin' changed permissions for file '/path/to/file.txt',informational,0.36
+2023-09-17T01:42:31,192.168.1.100,safe,192.168.0.2,safe,guest,Workstation123,application-errors,System shutdown: Reason2,error,0.76
+2023-09-17T01:42:31,10.1.1.1,malicious,10.0.0.101,malicious,admin,Workstation123,system-shutdown,System shutdown: Reason2,warning,0.71
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,guest,DeviceXYZ,application-usage,Application error: Error message: 96,warning,0.93
+2023-09-17T01:42:31,10.1.1.1,malicious,10.0.0.101,safe,admin,ServerABC,file-access,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.1
+2023-09-17T01:42:31,10.1.1.1,safe,10.0.0.101,safe,guest,DeviceXYZ,system-shutdown,Application error: Error message: 96,warning,0.2
+2023-09-17T01:42:31,10.0.0.2,safe,192.168.0.2,malicious,guest,Workstation123,application-errors,User 'admin' changed permissions for file '/path/to/file.txt',warning,0.15
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.10.6,malicious,user123,ServerABC,permission-changes,Critical system failure: Error message: 78,critical,0.21
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.0.2,safe,guest,Workstation123,application-usage,Critical system failure: Error message: 78,warning,0.62
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.10.6,malicious,user123,ServerABC,auth-success,File access: Read to file '/path/to/file120.txt',informational,0.24
+2023-09-17T01:42:31,192.168.1.100,safe,192.168.0.2,safe,guest,DeviceXYZ,application-errors,User 'admin' changed permissions for file '/path/to/file.txt',error,0.55
+2023-09-17T01:42:31,31.15.164.90:27783,malicious,10.0.0.101,malicious,user123,ServerABC,file-access,File access: Read to file '/path/to/file120.txt',critical,0.34
+2023-09-17T01:42:31,10.1.1.1,malicious,192.168.2.6,malicious,user123,ServerABC,auth-lockout,Successful login for user 'anonymous' from IP '192.168.1.100',informational,0.02
+2023-09-17T01:42:31,192.168.10.5,malicious,166.127.213.176,safe,guest,Workstation123,application-errors,System shutdown: Reason2,error,0.85
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.10.6,malicious,user123,ServerABC,system-shutdown,File access: Read to file '/path/to/file120.txt',error,0.22
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.10.6,safe,admin,ServerABC,permission-changes,Successful login for user 'anonymous' from IP '192.168.1.100',warning,0.45
+2023-09-17T01:42:31,10.0.0.2,malicious,192.168.2.6,malicious,user123,Workstation123,file-access,System shutdown: Reason2,error,0.74
+2023-09-17T01:42:31,192.168.10.5,malicious,192.168.10.6,malicious,admin,ServerABC,permission-changes,User 'admin' locked out after multiple failed attempts,critical,0.54
+2023-09-17T01:42:31,10.0.0.2,safe,10.0.0.101,malicious,admin,Workstation123,system-shutdown,System shutdown: Reason2,informational,0.21
+2023-09-17T01:42:31,192.168.10.5,safe,10.0.0.101,safe,anonymous,Workstation123,auth-success,User 'user123' used application 'App1',warning,0.96
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.2.6,malicious,anonymous,ServerABC,permission-changes,System shutdown: Reason2,informational,0.0
+2023-09-17T01:42:31,10.0.0.2,malicious,10.0.0.3,malicious,admin,DeviceXYZ,permission-changes,User 'admin' locked out after multiple failed attempts,informational,0.45
+2023-09-17T01:42:31,192.168.10.5,safe,192.168.0.2,malicious,user123,Workstation123,application-errors,System shutdown: Reason2,error,0.58
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.10.6,safe,user123,ServerABC,permission-changes,File access: Read to file '/path/to/file120.txt',error,0.8
+2023-09-17T01:42:31,10.1.1.1,malicious,10.0.0.101,safe,anonymous,ServerABC,system-failure,User 'admin' changed permissions for file '/path/to/file.txt',error,0.17
+2023-09-17T01:42:31,192.168.1.100,malicious,192.168.10.6,malicious,user123,Workstation123,auth-success,File access: Read to file '/path/to/file120.txt',informational,0.41
+2023-09-17T01:42:31,172.16.0.10,safe,192.168.10.6,malicious,admin,Workstation123,permission-changes,Critical system failure: Error message: 78,error,0.6
+2023-09-17T01:42:31,31.15.164.90:27783,safe,10.0.0.101,safe,guest,ServerABC,system-shutdown,File access: Read to file '/path/to/file120.txt',error,0.37
+2023-09-17T01:42:31,10.0.0.100,safe,166.127.213.176,malicious,user123,DeviceXYZ,system-failure,System shutdown: Reason2,error,0.34
